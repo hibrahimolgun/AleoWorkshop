@@ -1,4 +1,4 @@
-program chorster.aleo;
+program chorsterworkshopankara.aleo;
 
 record patates:
     owner as address.private;
@@ -13,7 +13,7 @@ function mint_public:
     input r0 as address.public;
     input r1 as u64.public;
     async mint_public r0 r1 into r2;
-    output r2 as chorster.aleo/mint_public.future;
+    output r2 as chorsterworkshopankara.aleo/mint_public.future;
 
 finalize mint_public:
     input r0 as address.public;
@@ -34,7 +34,7 @@ function transfer_public:
     input r0 as address.public;
     input r1 as u64.public;
     async transfer_public self.caller r0 r1 into r2;
-    output r2 as chorster.aleo/transfer_public.future;
+    output r2 as chorsterworkshopankara.aleo/transfer_public.future;
 
 finalize transfer_public:
     input r0 as address.public;
@@ -67,7 +67,7 @@ function transfer_private_to_public:
     cast r0.owner r3 into r4 as patates.record;
     async transfer_private_to_public r1 r2 into r5;
     output r4 as patates.record;
-    output r5 as chorster.aleo/transfer_private_to_public.future;
+    output r5 as chorsterworkshopankara.aleo/transfer_private_to_public.future;
 
 finalize transfer_private_to_public:
     input r0 as address.public;
@@ -83,7 +83,7 @@ function transfer_public_to_private:
     cast r0 r1 into r2 as patates.record;
     async transfer_public_to_private self.caller r1 into r3;
     output r2 as patates.record;
-    output r3 as chorster.aleo/transfer_public_to_private.future;
+    output r3 as chorsterworkshopankara.aleo/transfer_public_to_private.future;
 
 finalize transfer_public_to_private:
     input r0 as address.public;

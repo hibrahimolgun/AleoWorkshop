@@ -1,5 +1,5 @@
-// The 'chorster' program.
-program chorster.aleo {
+// The 'chorsterworkshopankara' program.
+program chorsterworkshopankara.aleo {
     
     mapping account:address => u64;
 
